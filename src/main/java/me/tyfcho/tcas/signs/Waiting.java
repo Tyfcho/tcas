@@ -36,7 +36,7 @@ public class Waiting extends SignAction {
               Bukkit.getScheduler().cancelTask(this.countdown);
               this.countdown = 0;
             }
-          }0L, 20L);
+          },0L, 20L);
     } else {
       Station station = new Station(event);
       event.getGroup().getActions().launchReset();
@@ -44,7 +44,7 @@ public class Waiting extends SignAction {
       Bukkit.getScheduler().scheduleSyncDelayedTask((Plugin)AdvancedSigns.getInstance(), () -> {
             station.launchTo(BlockFace.valueOf(event.getLine(3).toUpperCase(Locale.ROOT)));
             this.timer = Integer.parseInt(event.getLine(2));
-          }this.timer * 20L);
+          },this.timer * 20L);
     }
   }
 
