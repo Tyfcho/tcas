@@ -1,5 +1,7 @@
 package me.tyfcho.tcas.ridetypes;
 
+import org.bukkit.entity.Player;
+
 public class Attraction {
 
     private final String name;
@@ -9,6 +11,9 @@ public class Attraction {
     private boolean restraints;
     private boolean marshall;
     private Mode mode;
+    private int sectors;
+    private Player claimedBy;  // Player who has claimed the attraction in OPERATOR mode
+    private boolean isAutoRunning;  // Track if AUTO mode is running
 
     public Attraction(String name) {
         this.name = name;
@@ -17,8 +22,13 @@ public class Attraction {
         this.gates = false;
         this.restraints = false;
         this.marshall = false;
-        this.mode = Mode.MANUAL; // Default mode is manual
+        this.mode = Mode.MANUAL;  // Default mode
+        this.sectors = 0;
+        this.claimedBy = null;
+        this.isAutoRunning = false;
     }
+
+    // Getters and setters for attraction properties
 
     public String getName() {
         return name;
@@ -70,6 +80,35 @@ public class Attraction {
 
     public void setMode(Mode mode) {
         this.mode = mode;
+        // Reset claimedBy when leaving OPERATOR mode
+        if (mode != Mode.OPERATOR) {
+            claimedBy = null;
+        }
+    }
+
+    public int getSectors() {
+        return sectors;
+    }
+
+    public void setSectors(int sectors) {
+        this.sectors = sectors;
+    }
+
+    // ClaimedBy for OPERATOR mode
+    public Player getClaimedBy() {
+        return claimedBy;
+    }
+
+    public void setClaimedBy(Player claimedBy) {
+        this.claimedBy = claimedBy;
+    }
+
+    // Auto mode running
+    public boolean isAutoRunning() {
+        return isAutoRunning;
+    }
+
+    public void setAutoRunning(boolean isAutoRunning) {
+        this.isAutoRunning = isAutoRunning;
     }
 }
-

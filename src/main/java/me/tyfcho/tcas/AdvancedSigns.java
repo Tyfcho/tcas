@@ -1,6 +1,7 @@
 package me.tyfcho.tcas;
 
 import com.bergerkiller.bukkit.tc.signactions.SignAction;
+import me.tyfcho.tcas.cloud.CommandRegister;
 import me.tyfcho.tcas.signs.*;
 import me.tyfcho.tcas.signs.MonorailSign;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -17,13 +18,7 @@ public final class AdvancedSigns extends JavaPlugin {
 
   public void onEnable() {
     instance = this;
-    SignAction.register((SignAction)this.tLaunch);
-    SignAction.register((SignAction)this.holdAndReleaseSign);
-    SignAction.register((SignAction)this.slowdownSign);
-    SignAction.register((SignAction)this.brakeAndSlowdownFalseSign);
-    SignAction.register((SignAction)this.freefallSign);
-    SignAction.register((SignAction)this.monorailSign);
-    SignAction.register((SignAction)this.catchCarSign);
+    registerSigns();    // Registers signs to TrainCarts
   }
 
   public void onDisable() {
@@ -43,4 +38,15 @@ public final class AdvancedSigns extends JavaPlugin {
   public static AdvancedSigns getInstance() {
     return instance;
   }
+
+  private void registerSigns() {
+    SignAction.register((SignAction)this.tLaunch);
+    SignAction.register((SignAction)this.holdAndReleaseSign);
+    SignAction.register((SignAction)this.slowdownSign);
+    SignAction.register((SignAction)this.brakeAndSlowdownFalseSign);
+    SignAction.register((SignAction)this.freefallSign);
+    SignAction.register((SignAction)this.monorailSign);
+    SignAction.register((SignAction)this.catchCarSign);
+  }
+
 }
