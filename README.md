@@ -7,7 +7,7 @@ The TCAS Plugin is designed to enhance your attraction management systems by off
 ## Features
 
 ### 1. Factory Creation via GUI
-- **Description:** Easily create new attractions using a user-friendly GUI. Use the command `/tcas create <attraction>` to input the attraction type (coaster or flatride) and name.
+- **Description:** Easily create new attractions using a user-friendly GUI.
 
 ### 2. Attraction Types
 - **Coaster:** Allows for configuring the number of sectors (0-9) corresponding to brake sections.
