@@ -51,7 +51,7 @@
   - Register and manage block sections and dispatch sections.
 
 #### Maintenance Mode
-- **Description:** For server administrators to manage track maintenance and transfers.
+- **Description:** For server administrators to manage track maintenance and transfers. Once this implementation has been tested enough, the operator would be able to transfer carts on and off the circuit, depending on how difficult they'd like to make it for themselves.
 - **Commands:**
   - `/tcas maintenancecontrol register <attraction>`
   - `/tcas maintenancecontrol addtransfer <attraction> <section-id>`
