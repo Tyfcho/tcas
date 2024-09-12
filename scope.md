@@ -72,5 +72,5 @@
 - **API Integration:** Implement using TrainCarts API to add properties to carts, signs, and nodes.
 
 ## Future Extensions
-
-- The file will be updated with additional features and requirements as they arise. Keep the implementation adaptable for future enhancements.
+- Support to simulate "PLC logic", here's a brief explaination about what it would be about: [Click here](https://en.wikipedia.org/wiki/IEC_61131-3). Most of the things that will be implemented would be in the direction of ladder and sequencial function diagrams. How this would be implemented, hasn't been researched enough to give proper explaination about it.
+- Future updates will be noted here.
