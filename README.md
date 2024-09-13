@@ -4,6 +4,13 @@
 
 The TCAS Plugin is designed to enhance your attraction management systems by offering new and exciting ways to control and automate rides. The primary goal of this plugin is to provide a more efficient and customizable experience for managing attractions, while also helping me gain more experience in Java development.
 
+TCAS won't be limited by just having TrainCarts support, but also support for any and all plugins that'd be noted within the scope. 
+
+Traincarts will have the following features added through this plugin: control panels, attraction registration for warping and such, easier operation setup, controlling animations through keyboard inputs
+
+The rest of the "Work in Progress" and/or "Future addons" will be documented in (plugins.md)[https://github.com/Tyfcho/tcas/blob/main/plugins.md]
+
+
 ## Features
 
 ### 1. Factory Creation via GUI
