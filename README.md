@@ -8,7 +8,7 @@ TCAS won't be limited by just having TrainCarts support, but also support for an
 
 Traincarts will have the following features added through this plugin: control panels, attraction registration for warping and such, easier operation setup, controlling animations through keyboard inputs
 
-The rest of the "Work in Progress" and/or "Future addons" will be documented in (plugins.md)[https://github.com/Tyfcho/tcas/blob/main/plugins.md]
+The rest of the "Work in Progress" and/or "Future addons" will be documented in [plugins.md](https://github.com/Tyfcho/tcas/blob/main/plugins.md)
 
 
 ## Features
