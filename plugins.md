@@ -2,4 +2,5 @@
 - TrainCarts
 
 ### TrainCarts extension:
-T.B.A.
+- Keyboard registration for velocity offsets, to facilitate flatrides
+- T.B.A.
