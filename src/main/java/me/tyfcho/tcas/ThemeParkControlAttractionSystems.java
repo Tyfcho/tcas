@@ -2,7 +2,7 @@ package me.tyfcho.tcas;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class AdvancedSigns extends JavaPlugin {
+public final class ThemeParkControlAttractionSystems extends JavaPlugin {
   public void onEnable() {
     // Plugin enable logic
   }
