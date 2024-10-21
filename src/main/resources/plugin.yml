@@ -1,7 +1,7 @@
 name: TCAS
 version: '1.0-SNAPSHOT'
-main: me.tyfcho.tCAS.TCAS
+main: me.tyfcho.tcas.TCAS
 api-version: '1.21'
-prefix: TPC
+prefix: TCAS
 authors: [Tyfcho]
-description: ThemeparkCore Plugin for MV & FC
+description: ThemeparkCoreAttractionSystems plugin [DO NOT DISTRIBUTE]
