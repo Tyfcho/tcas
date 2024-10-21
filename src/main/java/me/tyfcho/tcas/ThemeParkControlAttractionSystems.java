@@ -5,21 +5,28 @@ import cloud.commandframework.execution.CommandExecutionCoordinator;
 import cloud.commandframework.meta.SimpleCommandMeta;
 import me.tyfcho.tcas.commands.TCASCommand;
 import me.tyfcho.tcas.attractions.AttractionManager;
+import me.tyfcho.tcas.gui.FactoryCreationGUI;
+import me.tyfcho.tcas.listeners.FactoryClickListener;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.util.function.Function;
 
 public final class ThemeParkControlAttractionSystems extends JavaPlugin {
 
   private BukkitCommandManager<Player> commandManager;
   private AttractionManager attractionManager;
+  private FactoryCreationGUI factoryCreationGUI;
 
   @Override
   public void onEnable() {
     // Initialize the attraction manager
     attractionManager = new AttractionManager();
+
+    // Initialize the attraction creation factory
+    factoryCreationGUI = new FactoryCreationGUI();
+
+    // Register the event listener
+    getServer().getPluginManager().registerEvents(new FactoryClickListener(factoryCreationGUI), this);
 
     // Initialize the command manager using Cloud Command Framework
     try {
