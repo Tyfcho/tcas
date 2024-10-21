@@ -6,7 +6,7 @@ This document outlines the tasks and goals for implementing the TCAS plugin, bre
 - [x] **Initialize Plugin**
     - [x] Set up the `onEnable()` and `onDisable()` methods.
     - [x] Register all commands (like `/tcas`).
-    - [ ] Register event listeners (e.g., GUI interaction listeners).
+    - [x] Register event listeners (e.g., GUI interaction listeners).
     - [ ] Ensure config files are created and loaded properly during initialization.
 - [ ] **Plugin Configuration**
     - [ ] Implement configuration handling for custom plugin settings in `config.yml` (if needed).
@@ -21,7 +21,7 @@ This document outlines the tasks and goals for implementing the TCAS plugin, bre
     - [x] Add logic to route subcommands (like `create`, `dispatch`, `mode`).
     - [x] Use `AttractionManager` from `ThemeParkControlAttractionSystems` for managing player-attraction relationships.
 - [ ] **Subcommands**
-    - [ ] **`/tcas create`**: Open the Factory Creation GUI.
+    - [x] **`/tcas create`**: Open the Factory Creation GUI.
     - [ ] **`/tcas dispatch`**: Add logic to start an attraction (depending on the type: coaster, flatride).
     - [ ] **`/tcas mode <operator/auto/manual/maintenance>`**: Add logic to switch between different operation modes for attractions.
     - [ ] **`/tcas power`**: Add logic to claim control of the attraction in operator mode.
@@ -34,25 +34,25 @@ This document outlines the tasks and goals for implementing the TCAS plugin, bre
 ## 3. **GUI Module (`gui/`)**
 
 ### **`FactoryCreationGUI.java`**
-- [ ] **Design the GUI**
-    - [ ] Create an inventory-based GUI for users to create and configure attractions.
-    - [ ] Add clickable icons for choosing attraction types (e.g., Coaster, Flatride).
+- [x] **Design the GUI**
+    - [x] Create an inventory-based GUI for users to create and configure attractions.
+    - [x] Add clickable icons for choosing attraction types (e.g., Coaster, Flatride).
     - [ ] Add input options (via item clicks) for configuring specific parameters, like:
         - [ ] Coaster brake sectors (0–9).
         - [ ] Flatride sequence completion triggers.
-- [ ] **Handle GUI Input**
-    - [ ] Add logic to handle user input (detect which item was clicked).
-    - [ ] Process user selections and save the configuration temporarily until confirmed.
+- [x] **Handle GUI Input**
+    - [x] Add logic to handle user input (detect which item was clicked).
+    - [x] Process user selections and save the configuration temporarily until confirmed.
 
 ---
 
 ## 4. **Listeners Module (`listeners/`)**
 
-### **`GUIEventListener.java`**
-- [ ] **Listen for GUI Click Events**
-    - [ ] Add logic to handle `InventoryClickEvent` when users interact with the Factory Creation GUI.
-    - [ ] Ensure that invalid interactions are blocked (e.g., removing items from the GUI).
-    - [ ] Call the appropriate methods to update attraction settings based on user input.
+### **`FactoryClickListener.java`**
+- [x] **Listen for GUI Click Events**
+    - [x] Add logic to handle `InventoryClickEvent` when users interact with the Factory Creation GUI.
+    - [x] Ensure that invalid interactions are blocked (e.g., removing items from the GUI).
+    - [x] Call the appropriate methods to update attraction settings based on user input.
 
 ---
 
@@ -122,7 +122,9 @@ This document outlines the tasks and goals for implementing the TCAS plugin, bre
 - [ ] Comment the code for future developers who may want to expand the plugin.
 
 ---
+
 ## Overall Timeline
+
 1. **Phase 1**: Core Setup
     - Set up the main plugin structure, basic commands, and event listeners.
 2. **Phase 2**: GUI Development
@@ -135,4 +137,3 @@ This document outlines the tasks and goals for implementing the TCAS plugin, bre
     - Add TrainCarts keyboard control, operating modes, and other features as listed in the future expansion section.
 6. **Phase 6**: Testing and Bug Fixing
     - Thoroughly test all functionality in a live environment to ensure stability and compatibility.
----
