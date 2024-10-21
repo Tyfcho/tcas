@@ -1,17 +1,11 @@
-Sure! A `TODO.md` file is a great way to track the steps needed to implement your plugin. Below is a detailed breakdown of the tasks for each module, class, and feature required to make the **TCAS (Theme Park Control Attraction Systems)** plugin work.
-
-### `TODO.md`
-
----
-
 # TCAS Plugin Development TODO
 
 This document outlines the tasks and goals for implementing the TCAS plugin, breaking down each module and class required to complete the plugin.
 
 ## 1. **Main Plugin Class (`ThemeParkControlAttractionSystems.java`)**
-- [ ] **Initialize Plugin**
-    - [ ] Set up the `onEnable()` and `onDisable()` methods.
-    - [ ] Register all commands (like `/tcas`).
+- [x] **Initialize Plugin**
+    - [x] Set up the `onEnable()` and `onDisable()` methods.
+    - [x] Register all commands (like `/tcas`).
     - [ ] Register event listeners (e.g., GUI interaction listeners).
     - [ ] Ensure config files are created and loaded properly during initialization.
 - [ ] **Plugin Configuration**
@@ -22,24 +16,18 @@ This document outlines the tasks and goals for implementing the TCAS plugin, bre
 ## 2. **Commands Module (`commands/`)**
 
 ### **`TCASCommand.java`**
-- [ ] **Create Main Command Handler**
-    - [ ] Set up `/tcas` as the main command.
-    - [ ] Add logic to route subcommands (like `create`, `dispatch`, `mode`).
+- [x] **Create Main Command Handler**
+    - [x] Set up `/tcas` as the main command.
+    - [x] Add logic to route subcommands (like `create`, `dispatch`, `mode`).
+    - [x] Use `AttractionManager` from `ThemeParkControlAttractionSystems` for managing player-attraction relationships.
 - [ ] **Subcommands**
-    - [ ] **`/tcas create`**:
-        - [ ] Open the Factory Creation GUI.
-    - [ ] **`/tcas dispatch`**:
-        - [ ] Add logic to start an attraction (depending on the type: coaster, flatride).
-    - [ ] **`/tcas mode <operator/auto/manual/maintenance>`**:
-        - [ ] Add logic to switch between different operation modes for attractions.
-    - [ ] **`/tcas power`**:
-        - [ ] Add logic to claim control of the attraction in operator mode.
-    - [ ] **`/tcas showtrigger`**:
-        - [ ] Implement logic to display the current status of an attraction's triggers.
-    - [ ] **`/tcas gates`**:
-        - [ ] Add logic to control the gates of the attraction (open/close).
-    - [ ] **`/tcas restraints`**:
-        - [ ] Implement restraint control logic for coasters or other attractions.
+    - [ ] **`/tcas create`**: Open the Factory Creation GUI.
+    - [ ] **`/tcas dispatch`**: Add logic to start an attraction (depending on the type: coaster, flatride).
+    - [ ] **`/tcas mode <operator/auto/manual/maintenance>`**: Add logic to switch between different operation modes for attractions.
+    - [ ] **`/tcas power`**: Add logic to claim control of the attraction in operator mode.
+    - [ ] **`/tcas showtrigger`**: Implement logic to display the current status of an attraction's triggers.
+    - [ ] **`/tcas gates`**: Add logic to control the gates of the attraction (open/close).
+    - [ ] **`/tcas restraints`**: Implement restraint control logic for coasters or other attractions.
 
 ---
 
@@ -71,9 +59,9 @@ This document outlines the tasks and goals for implementing the TCAS plugin, bre
 ## 5. **Attractions Module (`attractions/`)**
 
 ### **`Attraction.java`**
-- [ ] **Base Attraction Class**
-    - [ ] Define common properties and methods shared by all attraction types (e.g., name, type, operating mode).
-    - [ ] Include methods for controlling the attraction, such as starting, stopping, and setting the mode.
+- [x] **Base Attraction Class**
+    - [x] Define common properties and methods shared by all attraction types (e.g., name, type, operating mode).
+    - [x] Include methods for controlling the attraction, such as starting, stopping, and setting the mode.
 
 ### **`Coaster.java`**
 - [ ] **Coaster-Specific Logic**
@@ -132,29 +120,3 @@ This document outlines the tasks and goals for implementing the TCAS plugin, bre
 - [ ] Create user documentation (how to use the `/tcas` commands, how to create attractions).
 - [ ] Provide detailed explanations of operating modes and attraction configuration options.
 - [ ] Comment the code for future developers who may want to expand the plugin.
-
----
-
-## Overall Timeline
-
-1. **Phase 1**: Core Setup
-    - Set up the main plugin structure, basic commands, and event listeners.
-
-2. **Phase 2**: GUI Development
-    - Develop the GUI for creating attractions, handle user input, and implement configuration saving.
-
-3. **Phase 3**: Attraction Management
-    - Implement classes for managing different attraction types (Coaster, Flatride) and control logic.
-
-4. **Phase 4**: Storage and Persistence
-    - Implement data storage for saving and loading attraction configurations.
-
-5. **Phase 5**: TrainCarts and Additional Features
-    - Add TrainCarts keyboard control, operating modes, and other features as listed in the future expansion section.
-
-6. **Phase 6**: Testing and Bug Fixing
-    - Thoroughly test all functionality in a live environment to ensure stability and compatibility.
-
----
-
-This `TODO.md` provides a full roadmap for developing your TCAS plugin. By breaking down each module and class, you can track progress more easily and focus on one part of the project at a time.
