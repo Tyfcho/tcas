@@ -120,3 +120,19 @@ This document outlines the tasks and goals for implementing the TCAS plugin, bre
 - [ ] Create user documentation (how to use the `/tcas` commands, how to create attractions).
 - [ ] Provide detailed explanations of operating modes and attraction configuration options.
 - [ ] Comment the code for future developers who may want to expand the plugin.
+
+---
+## Overall Timeline
+1. **Phase 1**: Core Setup
+    - Set up the main plugin structure, basic commands, and event listeners.
+2. **Phase 2**: GUI Development
+    - Develop the GUI for creating attractions, handle user input, and implement configuration saving.
+3. **Phase 3**: Attraction Management
+    - Implement classes for managing different attraction types (Coaster, Flatride) and control logic.
+4. **Phase 4**: Storage and Persistence
+    - Implement data storage for saving and loading attraction configurations.
+5. **Phase 5**: TrainCarts and Additional Features
+    - Add TrainCarts keyboard control, operating modes, and other features as listed in the future expansion section.
+6. **Phase 6**: Testing and Bug Fixing
+    - Thoroughly test all functionality in a live environment to ensure stability and compatibility.
+---
