@@ -36,7 +36,7 @@ This document outlines the tasks and goals for implementing the TCAS plugin, bre
     - [ ] Add coloring to callback command (line 108)
     - [ ] If called by command block or sudo, don't give the message (line 115)
     - [ ] Add check whether player even has permission to change the operator mode (line 129)
-    
+
 
 ---
 
@@ -110,6 +110,7 @@ This document outlines the tasks and goals for implementing the TCAS plugin, bre
 
 ### **Attraction Registration and Warping**
 - [ ] Implement functionality for registering and warping to specific attractions via a command (e.g., `/tcas warp <attraction>`).
+- [ ] Make player menu (for warps, cosmetics, audio client, etc.)
 
 ### **Expand Attraction Types**
 - [ ] Implement additional attraction types beyond Coasters and Flatrides as needed.
