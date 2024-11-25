@@ -22,12 +22,21 @@ This document outlines the tasks and goals for implementing the TCAS plugin, bre
     - [x] Use `AttractionManager` from `ThemeParkControlAttractionSystems` for managing player-attraction relationships.
 - [ ] **Subcommands**
     - [x] **`/tcas create`**: Open the Factory Creation GUI.
-    - [ ] **`/tcas dispatch`**: Add logic to start an attraction (depending on the type: coaster, flatride).
+    - [ ] **`/tcas dispatch`**: Add logic to start an attraction (depending on the type: coaster, flatride). (1)
     - [ ] **`/tcas mode <operator/auto/manual/maintenance>`**: Add logic to switch between different operation modes for attractions.
     - [ ] **`/tcas power`**: Add logic to claim control of the attraction in operator mode.
     - [ ] **`/tcas showtrigger`**: Implement logic to display the current status of an attraction's triggers.
     - [ ] **`/tcas gates`**: Add logic to control the gates of the attraction (open/close).
     - [ ] **`/tcas restraints`**: Implement restraint control logic for coasters or other attractions.
+
+    (1) TODOs specifically for **/tcas dispatch** in **TCASCommands.java**:
+    - [ ] Add logic to here to check whether player has "tcas.admin" permission node
+    - [ ] Add dispatch forcing logic
+    - [ ] Add dispatch debugging logic
+    - [ ] Add coloring to callback command (line 108)
+    - [ ] If called by command block or sudo, don't give the message (line 115)
+    - [ ] Add check whether player even has permission to change the operator mode (line 129)
+    
 
 ---
 

@@ -43,6 +43,8 @@ public class TCASCommand {
         commandManager.command(
                 commandManager.commandBuilder("tcas")
                         .literal("dispatch")
+                        .required("attraction", attraction())
+                        .optional("admin", stringParser())
                         .handler(this::handleDispatchCommand)
                         .build()
         );
@@ -95,10 +97,22 @@ public class TCASCommand {
             /**
              * Forcing the dispatch will run the complete "dispatch sequence".
              * Forcing the dispatch will always tell user what outcome of run sequence is
-             * 
+             * Context admin in command execution will only be allowed if it is "-f" or "-d"
              */
+            if player.hasPermission(tcas.admin) {
+                if (admin == "-f") {
+                    //TODO: Add dispatch forcing logic
+                } elseif (admin == "-d") {
+                //TODO: Add dispatch debugging logic
+                } else {
+                    // TODO: Should add coloring to this output.
+                    player.sendMessage("Invalid admin option.")
+                }
+            }
         }
-        // Add logic here
+        // Add logic here, should add coloring as well...
+        // Note: Only send message if called by player command
+        // TODO: If called by command block or sudo, don't give the message
         player.sendMessage("Dispatching the attraction...");
     }
 
@@ -112,6 +126,8 @@ public class TCASCommand {
             return;
         }
 
+        // TODO: Add check whether player even has permission to change the operator mode
+        // Need to add a seperate switch case for administrators, to prevent players from switching attraction to maintenance mode.
         switch (mode.toLowerCase()) {
             case "operator":
                 player.sendMessage("Switched to Operator Mode.");
