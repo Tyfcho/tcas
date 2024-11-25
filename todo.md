@@ -1,12 +1,13 @@
 # TCAS Plugin Development TODO
 
 This document outlines the tasks and goals for implementing the TCAS plugin, breaking down each module and class required to complete the plugin.
+Testing will be documented [here](tested.md).
 
 ## 1. **Main Plugin Class (`ThemeParkControlAttractionSystems.java`)**
-- [x] **Initialize Plugin**
-    - [x] Set up the `onEnable()` and `onDisable()` methods.
-    - [x] Register all commands (like `/tcas`).
-    - [x] Register event listeners (e.g., GUI interaction listeners).
+- [ ] **Initialize Plugin**
+    - [ ] Set up the `onEnable()` and `onDisable()` methods.
+    - [ ] Register all commands (like `/tcas`).
+    - [ ] Register event listeners (e.g., GUI interaction listeners).
     - [ ] Ensure config files are created and loaded properly during initialization.
 - [ ] **Plugin Configuration**
     - [ ] Implement configuration handling for custom plugin settings in `config.yml` (if needed).
@@ -21,7 +22,7 @@ This document outlines the tasks and goals for implementing the TCAS plugin, bre
     - [x] Add logic to route subcommands (like `create`, `dispatch`, `mode`).
     - [x] Use `AttractionManager` from `ThemeParkControlAttractionSystems` for managing player-attraction relationships.
 - [ ] **Subcommands**
-    - [x] **`/tcas create`**: Open the Factory Creation GUI.
+    - [ ] **`/tcas create`**: Open the Factory Creation GUI.
     - [ ] **`/tcas dispatch`**: Add logic to start an attraction (depending on the type: coaster, flatride). (1)
     - [ ] **`/tcas mode <operator/auto/manual/maintenance>`**: Add logic to switch between different operation modes for attractions.
     - [ ] **`/tcas power`**: Add logic to claim control of the attraction in operator mode.
