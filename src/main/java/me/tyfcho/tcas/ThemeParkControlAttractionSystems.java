@@ -10,13 +10,29 @@ public final class ThemeParkControlAttractionSystems extends JavaPlugin {
   /**
    * Call all methods within the plugin that need initialization
    */
+
+  private TrainCartsAPIWrapper tcAPI;
+
   @Override
   public void onEnable() {
+
+    // Initialize wrapper
+    this.api = new TrainCartsAPIWrapper(this);
+
     getLogger().info("TCAS Plugin has been enabled.");
   }
 
   @Override
   public void onDisable() {
     getLogger().info("TCAS Plugin has been disabled.");
+  }
+
+  /**
+   * Get the API Wrapper for other parts of the plugin.
+   * 
+   * @return The TrainCartsAPIWrapper instance
+   */
+  public TrainCartsAPIWrapper getAPI() {
+    return tcAPI;
   }
 }
