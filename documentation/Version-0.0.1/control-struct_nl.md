@@ -30,3 +30,7 @@ TTD = (`puls poortjes open` + `vertraging` + `wegvallen puls poortjes` + `extern
 
 Stel dat we zeggen dat wanneer een speler zit, dat er dan een vertraging van 5 seconden komt, daarna wacht het systeem nog 10 seconden voordat de puls van de poortjes wegvalt, waarna de puls wordt doorgegeven dat de externe actuatoren mogen aangestuurd worden (bijvoorbeeld een tDelta(totaal) van 5 seconden) en tot slot een veiligheidsfactor van 2. dat zal dan inhouden dat de uitkomst van dit scenario het volgende is:
 TTD = ```10+5+5=20 * 2 = 40 seconden``` totdat de vrijgave compleet is
+
+Houd er rekening mee dat de veiligheidsfactor enkel nodig is wanneer je iets actueert wat niet een uitgaand slagingssignaal aanbiedt, bijvoorbeeld een animatie zonder terugkoppeling. 
+
+De veiligheidsfactor is dus niet noodzakelijk en wordt in meeste instanties op 1 gehouden. Aangezien de terugkoppelingen meestal wel aanwezig is.
