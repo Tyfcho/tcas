@@ -1,6 +1,6 @@
 name: TCAS
 version: '1.0-SNAPSHOT'
-main: me.tyfcho.tcas.TCAS
+main: me.tyfcho.tcas.ThemeParkControlAttractionSystems
 api-version: '1.21'
 prefix: TCAS
 authors: [Tyfcho]

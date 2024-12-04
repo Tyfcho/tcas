@@ -1,5 +1,6 @@
 package me.tyfcho.tcas;
 
+import me.tyfcho.tcas.integrations.traincarts.TrainCartsAPIWrapper;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -17,7 +18,7 @@ public final class ThemeParkControlAttractionSystems extends JavaPlugin {
   public void onEnable() {
 
     // Initialize wrapper
-    this.api = new TrainCartsAPIWrapper(this);
+    this.tcAPI = new TrainCartsAPIWrapper(this);
 
     getLogger().info("TCAS Plugin has been enabled.");
   }

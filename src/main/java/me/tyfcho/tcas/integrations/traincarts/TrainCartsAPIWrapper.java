@@ -7,9 +7,10 @@ package me.tyfcho.tcas.integrations.traincarts;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 // Importing the integration class, which also holds the datareader class.
-import me.tyfcho.tcas.integrations.traincarts.TrainCartsIntegration;
+
 
 public class TrainCartsAPIWrapper {
 
@@ -38,7 +39,7 @@ public class TrainCartsAPIWrapper {
             return trainCartsPowerGroup.createGroup(groupName);
         } catch (IOException e) {
             logger.severe("Failed to create group: " + groupName + " . Error: " + e.getMessage());
-            return "Error: Could not create group."
+            return "Error: Could not create group.";
         }
     }
 
