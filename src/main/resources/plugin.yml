@@ -4,4 +4,4 @@ main: me.tyfcho.tcas.ThemeParkControlAttractionSystems
 api-version: '1.21'
 prefix: TCAS
 authors: [Tyfcho]
-description: ThemeparkCoreAttractionSystems plugin [DO NOT DISTRIBUTE]
+description: ThemeparkCoreAttractionSystems
